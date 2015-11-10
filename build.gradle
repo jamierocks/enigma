@@ -162,3 +162,7 @@ configurations.archives {
 // And finally, make the build generate / install the jars.
 assemble.dependsOn thinJar
 build.dependsOn install
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.8'
+}
