@@ -25,48 +25,38 @@ public class MappingsWriter {
 	
 	public void write(PrintWriter out, Mappings mappings) throws IOException {
 		for (ClassMapping classMapping : sorted(mappings.classes())) {
-			write(out, classMapping, 0);
+			write(out, classMapping);
 		}
 	}
 	
-	private void write(PrintWriter out, ClassMapping classMapping, int depth) throws IOException {
-		if (classMapping.getDeobfName() == null) {
-			out.format("%sCLASS %s\n", getIndent(depth), classMapping.getObfFullName());
-		} else {
-			out.format("%sCLASS %s %s\n", getIndent(depth), classMapping.getObfFullName(), classMapping.getDeobfName());
+	private void write(PrintWriter out, ClassMapping classMapping) throws IOException {
+		if (classMapping.getDeobfName() != null) {
+			out.format("CL: %s %s\n", classMapping.getObfFullName(), classMapping.getDeobfName());
 		}
 		
 		for (ClassMapping innerClassMapping : sorted(classMapping.innerClasses())) {
-			write(out, innerClassMapping, depth + 1);
+			write(out, innerClassMapping);
 		}
 		
 		for (FieldMapping fieldMapping : sorted(classMapping.fields())) {
-			write(out, fieldMapping, depth + 1);
+			write(out, classMapping, fieldMapping);
 		}
 		
 		for (MethodMapping methodMapping : sorted(classMapping.methods())) {
-			write(out, methodMapping, depth + 1);
+			write(out, classMapping, methodMapping);
 		}
 	}
 	
-	private void write(PrintWriter out, FieldMapping fieldMapping, int depth) throws IOException {
-		out.format("%sFIELD %s %s %s\n", getIndent(depth), fieldMapping.getObfName(), fieldMapping.getDeobfName(), fieldMapping.getObfType().toString());
+	private void write(PrintWriter out, ClassMapping classMapping, FieldMapping fieldMapping) throws IOException {
+		out.format("FD: %s/%s %s/%s\n", classMapping.getObfFullName(), fieldMapping.getObfName(),
+				classMapping.getDeobfName(), fieldMapping.getDeobfName());
 	}
 	
-	private void write(PrintWriter out, MethodMapping methodMapping, int depth) throws IOException {
-		if (methodMapping.getDeobfName() == null) {
-			out.format("%sMETHOD %s %s\n", getIndent(depth), methodMapping.getObfName(), methodMapping.getObfSignature());
-		} else {
-			out.format("%sMETHOD %s %s %s\n", getIndent(depth), methodMapping.getObfName(), methodMapping.getDeobfName(), methodMapping.getObfSignature());
-		}
-		
-		for (ArgumentMapping argumentMapping : sorted(methodMapping.arguments())) {
-			write(out, argumentMapping, depth + 1);
-		}
-	}
-	
-	private void write(PrintWriter out, ArgumentMapping argumentMapping, int depth) throws IOException {
-		out.format("%sARG %d %s\n", getIndent(depth), argumentMapping.getIndex(), argumentMapping.getName());
+	private void write(PrintWriter out, ClassMapping classMapping, MethodMapping methodMapping) throws IOException {
+		out.format("MD: %s/%s %s %s/%s %s",
+				classMapping.getObfFullName(), methodMapping.getObfName(), methodMapping.getObfSignature(),
+				classMapping.getDeobfName(), methodMapping.getDeobfName(), methodMapping.getObfSignature());
+		// TODO: 6th param might break things :\
 	}
 	
 	private <T extends Comparable<T>> List<T> sorted(Iterable<T> classes) {
@@ -76,13 +66,5 @@ public class MappingsWriter {
 		}
 		Collections.sort(out);
 		return out;
-	}
-	
-	private String getIndent(int depth) {
-		StringBuilder buf = new StringBuilder();
-		for (int i = 0; i < depth; i++) {
-			buf.append("\t");
-		}
-		return buf.toString();
 	}
 }
