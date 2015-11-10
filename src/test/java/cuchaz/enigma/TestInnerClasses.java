@@ -15,6 +15,7 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.jar.JarFile;
 
+import cuchaz.enigma.Deobfuscator;
 import org.junit.Test;
 
 import static cuchaz.enigma.TestEntryFactory.*;

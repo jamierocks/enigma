@@ -8,20 +8,18 @@
  * Contributors:
  *     Jeff Martin - initial API and implementation
  ******************************************************************************/
-package cuchaz.enigma.inputs.translation;
+package cuchaz.enigma.inputs.innerClasses;
 
-public class C_SubClass extends B_BaseClass {
+import cuchaz.enigma.inputs.innerClasses.*;
+
+public class B_AnonymousWithScopeArgs {
 	
-	public char f2; // shadows B_BaseClass.f2
-	public int f3;
-	public int f4;
-	
-	@Override
-	public int m1() {
-		return 32;
-	}
-	
-	public int m3() {
-		return 7;
+	public static void foo(final cuchaz.enigma.inputs.innerClasses.D_Simple arg) {
+		System.out.println(new Object() {
+			@Override
+			public String toString() {
+				return arg.toString();
+			}
+		});
 	}
 }

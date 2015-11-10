@@ -18,18 +18,6 @@ version = '0.10.4b'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-// Custom source layout
-sourceSets {
-	main {
-		java { srcDir 'src' }
-		resources { srcDir 'conf' }
-	}
-	test {
-		java { srcDir 'test' }
-		resources { srcDir 'test' }
-	}
-}
-
 repositories {
 	mavenLocal()
 	mavenCentral()

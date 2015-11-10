@@ -10,31 +10,27 @@
  ******************************************************************************/
 package cuchaz.enigma.inputs.inheritanceTree;
 
-// none/c extends none/a
-public class SubclassB extends BaseClass {
+import cuchaz.enigma.inputs.inheritanceTree.*;
+
+// none/d extends none/b
+public class SubsubclassAA extends cuchaz.enigma.inputs.inheritanceTree.SubclassA {
 	
-	// a
-	private int m_numThings;
+	protected SubsubclassAA() {
+		// call to none/b.<init>(Ljava/lang/String;)V
+		super("AA");
+	}
 	
-	// <init>()V
-	protected SubclassB() {
-		// none/a.<init>(Ljava/lang/String;)V
-		super("B");
-		
-		// access to a
-		m_numThings = 4;
+	@Override
+	// a()Ljava/lang/String;
+	public String getName() {
+		// call to none/b.a()Ljava/lang/String;
+		return "subsub" + super.getName();
 	}
 	
 	@Override
 	// a()V
 	public void doBaseThings() {
-		// call to none/a.a()Ljava/lang/String;
-		System.out.println("Base things by B! " + getName());
-	}
-	
-	// b()V
-	public void doBThings() {
-		// access to a
-		System.out.println("" + m_numThings + " B things!");
+		// call to none/d.a()Ljava/lang/String;
+		System.out.println("Base things by " + getName());
 	}
 }

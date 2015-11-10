@@ -10,8 +10,10 @@
  ******************************************************************************/
 package cuchaz.enigma.inputs.inheritanceTree;
 
+import cuchaz.enigma.inputs.inheritanceTree.*;
+
 // none/b extends none/a
-public abstract class SubclassA extends BaseClass {
+public abstract class SubclassA extends cuchaz.enigma.inputs.inheritanceTree.BaseClass {
 	
 	// <init>(Ljava/lang/String;)V
 	protected SubclassA(String name) {

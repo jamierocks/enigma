@@ -10,6 +10,11 @@
  ******************************************************************************/
 package cuchaz.enigma.inputs.constructors;
 
+import cuchaz.enigma.inputs.constructors.BaseClass;
+import cuchaz.enigma.inputs.constructors.DefaultConstructable;
+import cuchaz.enigma.inputs.constructors.SubClass;
+import cuchaz.enigma.inputs.constructors.SubSubClass;
+
 // none/b
 public class Caller {
 	

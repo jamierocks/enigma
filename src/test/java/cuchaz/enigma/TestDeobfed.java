@@ -17,6 +17,7 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.jar.JarFile;
 
+import cuchaz.enigma.Deobfuscator;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

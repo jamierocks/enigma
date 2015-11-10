@@ -16,11 +16,12 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.jar.JarFile;
 
+import cuchaz.enigma.*;
 import org.junit.Test;
 
 import cuchaz.enigma.mapping.BehaviorEntry;
 
-public class TestTokensConstructors extends TokenChecker {
+public class TestTokensConstructors extends cuchaz.enigma.TokenChecker {
 	
 	public TestTokensConstructors()
 	throws Exception {

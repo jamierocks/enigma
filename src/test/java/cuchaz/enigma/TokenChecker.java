@@ -18,6 +18,7 @@ import java.util.jar.JarFile;
 import com.google.common.collect.Lists;
 import com.strobel.decompiler.languages.java.ast.CompilationUnit;
 
+import cuchaz.enigma.Deobfuscator;
 import cuchaz.enigma.analysis.EntryReference;
 import cuchaz.enigma.analysis.SourceIndex;
 import cuchaz.enigma.analysis.Token;
