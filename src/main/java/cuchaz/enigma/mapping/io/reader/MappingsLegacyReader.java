@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Deque;
 
-public class MappingsOriginalReader implements IMappingsReader {
+public class MappingsLegacyReader implements IMappingsReader {
 
 	@Override
 	public Mappings read(Reader in) throws IOException, MappingParseException {
