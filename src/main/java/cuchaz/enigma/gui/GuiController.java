@@ -40,6 +40,7 @@ import cuchaz.enigma.mapping.ClassEntry;
 import cuchaz.enigma.mapping.Entry;
 import cuchaz.enigma.mapping.FieldEntry;
 import cuchaz.enigma.mapping.MappingParseException;
+import cuchaz.enigma.mapping.MappingsOriginalReader;
 import cuchaz.enigma.mapping.MappingsReader;
 import cuchaz.enigma.mapping.MappingsWriter;
 import cuchaz.enigma.mapping.MethodEntry;
@@ -77,6 +78,16 @@ public class GuiController {
 	public void closeJar() {
 		m_deobfuscator = null;
 		m_gui.onCloseJar();
+	}
+
+	public void openOriginalMappings(File selectedFile) throws IOException, MappingParseException {
+		FileReader in = new FileReader(selectedFile);
+		m_deobfuscator.setMappings(new MappingsOriginalReader().read(in));
+		in.close();
+		m_isDirty = false;
+		m_gui.setMappingsFile(selectedFile);
+		refreshClasses();
+		refreshCurrentClass();
 	}
 	
 	public void openMappings(File file) throws IOException, MappingParseException {

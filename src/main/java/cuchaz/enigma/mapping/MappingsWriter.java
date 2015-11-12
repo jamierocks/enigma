@@ -55,7 +55,7 @@ public class MappingsWriter {
 	
 	private void write(PrintWriter out, Mappings mappings, ClassMapping classMapping, MethodMapping methodMapping)
 			throws IOException {
-		out.format("MD: %s/%s %s %s/%s %s",
+		out.format("MD: %s/%s %s %s/%s %s\n",
 				classMapping.getObfFullName(), methodMapping.getObfName(), methodMapping.getObfSignature(),
 				classMapping.getDeobfName(), methodMapping.getDeobfName(), methodMapping.getDeobfSiganture(mappings));
 	}

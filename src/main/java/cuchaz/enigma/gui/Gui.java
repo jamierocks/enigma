@@ -542,6 +542,25 @@ public class Gui {
 				m_openMappingsMenu = item;
 			}
 			{
+				JMenuItem item = new JMenuItem("Open Original Mappings...");
+				menu.add(item);
+				item.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent event) {
+						if (m_mappingsFileChooser.showOpenDialog(m_frame) == JFileChooser.APPROVE_OPTION) {
+							try {
+								m_controller.openOriginalMappings(m_mappingsFileChooser.getSelectedFile());
+							} catch (IOException ex) {
+								throw new Error(ex);
+							} catch (MappingParseException ex) {
+								JOptionPane.showMessageDialog(m_frame, ex.getMessage());
+							}
+						}
+					}
+				});
+				m_openMappingsMenu = item;
+			}
+			{
 				JMenuItem item = new JMenuItem("Save Mappings");
 				menu.add(item);
 				item.addActionListener(new ActionListener() {
