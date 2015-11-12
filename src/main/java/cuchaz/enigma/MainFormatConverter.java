@@ -30,7 +30,7 @@ import cuchaz.enigma.mapping.FieldEntry;
 import cuchaz.enigma.mapping.FieldMapping;
 import cuchaz.enigma.mapping.EntryFactory;
 import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsReader;
+import cuchaz.enigma.mapping.reader.MappingsReader;
 import cuchaz.enigma.mapping.MappingsWriter;
 import cuchaz.enigma.mapping.Type;
 

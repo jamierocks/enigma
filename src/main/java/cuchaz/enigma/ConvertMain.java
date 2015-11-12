@@ -31,7 +31,7 @@ import cuchaz.enigma.mapping.FieldMapping;
 import cuchaz.enigma.mapping.MappingParseException;
 import cuchaz.enigma.mapping.Mappings;
 import cuchaz.enigma.mapping.MappingsChecker;
-import cuchaz.enigma.mapping.MappingsReader;
+import cuchaz.enigma.mapping.reader.MappingsReader;
 import cuchaz.enigma.mapping.MappingsWriter;
 import cuchaz.enigma.mapping.MethodMapping;
 

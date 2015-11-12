@@ -8,22 +8,29 @@
  * Contributors:
  *     Jeff Martin - initial API and implementation
  ******************************************************************************/
-package cuchaz.enigma.mapping;
+package cuchaz.enigma.mapping.reader;
+
+import cuchaz.enigma.mapping.ClassMapping;
+import cuchaz.enigma.mapping.FieldMapping;
+import cuchaz.enigma.mapping.MappingParseException;
+import cuchaz.enigma.mapping.Mappings;
+import cuchaz.enigma.mapping.MethodMapping;
+import cuchaz.enigma.mapping.Signature;
+import cuchaz.enigma.mapping.Type;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.Scanner;
 
-public class MappingsReader {
+public class MappingsReader implements IMappingsReader {
 
-	public Mappings read(Reader in)
-	throws IOException, MappingParseException {
+	@Override
+	public Mappings read(Reader in) throws IOException, MappingParseException {
 		return read(new BufferedReader(in));
 	}
 
-	public Mappings read(BufferedReader in)
-	throws IOException, MappingParseException {
+	public Mappings read(BufferedReader in) throws IOException, MappingParseException {
 		Mappings mappings = new Mappings();
 
 		Scanner scanner = new Scanner(in);

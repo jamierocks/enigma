@@ -16,7 +16,7 @@ import java.util.jar.JarFile;
 
 import cuchaz.enigma.Deobfuscator.ProgressListener;
 import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsReader;
+import cuchaz.enigma.mapping.reader.MappingsReader;
 
 public class CommandMain {
 	

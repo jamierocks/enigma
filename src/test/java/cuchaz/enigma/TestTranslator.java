@@ -23,7 +23,7 @@ import org.junit.Test;
 
 import cuchaz.enigma.mapping.Entry;
 import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsReader;
+import cuchaz.enigma.mapping.reader.MappingsReader;
 import cuchaz.enigma.mapping.TranslationDirection;
 import cuchaz.enigma.mapping.Translator;
 
