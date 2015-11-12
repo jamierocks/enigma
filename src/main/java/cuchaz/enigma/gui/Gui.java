@@ -543,7 +543,7 @@ public class Gui {
 				m_openMappingsMenu = item;
 			}
 			{
-				JMenuItem item = new JMenuItem("Open Original Mappings...");
+				JMenuItem item = new JMenuItem("Open Legacy Mappings...");
 				menu.add(item);
 				item.addActionListener(new ActionListener() {
 					@Override
