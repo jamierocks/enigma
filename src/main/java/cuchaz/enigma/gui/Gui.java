@@ -112,6 +112,7 @@ public class Gui {
 	// dynamic menu items
 	private JMenuItem m_closeJarMenu;
 	private JMenuItem m_openMappingsMenu;
+	private JMenuItem m_openLegacyMappingsMenu;
 	private JMenuItem m_saveMappingsMenu;
 	private JMenuItem m_saveMappingsAsMenu;
 	private JMenuItem m_closeMappingsMenu;
@@ -558,7 +559,7 @@ public class Gui {
 						}
 					}
 				});
-				m_openMappingsMenu = item;
+				m_openLegacyMappingsMenu = item;
 			}
 			{
 				JMenuItem item = new JMenuItem("Save Mappings");
@@ -705,6 +706,7 @@ public class Gui {
 		// update menu
 		m_closeJarMenu.setEnabled(true);
 		m_openMappingsMenu.setEnabled(true);
+		m_openLegacyMappingsMenu.setEnabled(true);
 		m_saveMappingsMenu.setEnabled(false);
 		m_saveMappingsAsMenu.setEnabled(true);
 		m_closeMappingsMenu.setEnabled(true);
@@ -725,6 +727,7 @@ public class Gui {
 		// update menu
 		m_closeJarMenu.setEnabled(false);
 		m_openMappingsMenu.setEnabled(false);
+		m_openLegacyMappingsMenu.setEnabled(false);
 		m_saveMappingsMenu.setEnabled(false);
 		m_saveMappingsAsMenu.setEnabled(false);
 		m_closeMappingsMenu.setEnabled(false);
