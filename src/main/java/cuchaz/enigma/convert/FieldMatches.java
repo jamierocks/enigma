@@ -19,8 +19,8 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.FieldEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
 
 
 public class FieldMatches {

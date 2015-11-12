@@ -16,7 +16,7 @@ import java.util.Set;
 import com.google.common.collect.Sets;
 
 import cuchaz.enigma.Util;
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 
 public class ClassMatch {

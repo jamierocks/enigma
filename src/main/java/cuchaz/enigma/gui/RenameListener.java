@@ -10,7 +10,7 @@
  ******************************************************************************/
 package cuchaz.enigma.gui;
 
-import cuchaz.enigma.mapping.Entry;
+import cuchaz.enigma.mapping.entry.Entry;
 
 public interface RenameListener {
 	void rename(Entry obfEntry, String newName);

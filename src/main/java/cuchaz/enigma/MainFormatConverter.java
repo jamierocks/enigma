@@ -23,16 +23,16 @@ import javassist.CtField;
 import com.google.common.collect.Maps;
 
 import cuchaz.enigma.analysis.JarClassIterator;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ClassMapping;
-import cuchaz.enigma.mapping.ClassNameReplacer;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.FieldMapping;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.reader.MappingsReader;
-import cuchaz.enigma.mapping.MappingsWriter;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.type.ClassMapping;
+import cuchaz.enigma.mapping.impl.ClassNameReplacer;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.type.FieldMapping;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.util.Mappings;
+import cuchaz.enigma.mapping.io.reader.MappingsReader;
+import cuchaz.enigma.mapping.io.writer.MappingsWriter;
+import cuchaz.enigma.mapping.element.Type;
 
 public class MainFormatConverter {
 	

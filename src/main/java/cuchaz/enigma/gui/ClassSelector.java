@@ -29,7 +29,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class ClassSelector extends JTree {
 	

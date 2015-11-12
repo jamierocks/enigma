@@ -43,21 +43,21 @@ import com.google.common.collect.Sets;
 
 import cuchaz.enigma.Constants;
 import cuchaz.enigma.Util;
-import cuchaz.enigma.analysis.ClassImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassImplementationsTreeNode;
 import cuchaz.enigma.analysis.EntryReference;
 import cuchaz.enigma.analysis.JarIndex;
 import cuchaz.enigma.bytecode.ConstPoolEditor;
 import cuchaz.enigma.bytecode.InfoType;
 import cuchaz.enigma.bytecode.accessors.ConstInfoAccessor;
 import cuchaz.enigma.convert.ClassNamer.SidedClassNamer;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ClassNameReplacer;
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.Signature;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.impl.ClassNameReplacer;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.element.Signature;
+import cuchaz.enigma.mapping.element.Type;
 
 public class ClassIdentity {
 	

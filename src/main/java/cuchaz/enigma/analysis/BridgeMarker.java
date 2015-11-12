@@ -13,8 +13,8 @@ package cuchaz.enigma.analysis;
 import javassist.CtClass;
 import javassist.CtMethod;
 import javassist.bytecode.AccessFlag;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.MethodEntry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.entry.MethodEntry;
 
 public class BridgeMarker {
 	

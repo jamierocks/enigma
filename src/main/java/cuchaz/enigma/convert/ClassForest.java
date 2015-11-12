@@ -15,7 +15,7 @@ import java.util.Collection;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 
 public class ClassForest {

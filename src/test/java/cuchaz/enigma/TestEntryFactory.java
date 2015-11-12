@@ -11,13 +11,13 @@
 package cuchaz.enigma;
 
 import cuchaz.enigma.analysis.EntryReference;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ConstructorEntry;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.Signature;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.ConstructorEntry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.element.Signature;
+import cuchaz.enigma.mapping.element.Type;
 
 public class TestEntryFactory {
 	

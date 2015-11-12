@@ -49,9 +49,9 @@ import cuchaz.enigma.convert.ClassMatching;
 import cuchaz.enigma.convert.ClassNamer;
 import cuchaz.enigma.convert.MappingsConverter;
 import cuchaz.enigma.gui.ClassSelector.ClassSelectionListener;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsChecker;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.util.Mappings;
+import cuchaz.enigma.mapping.impl.MappingsChecker;
 import de.sciss.syntaxpane.DefaultSyntaxKit;
 
 

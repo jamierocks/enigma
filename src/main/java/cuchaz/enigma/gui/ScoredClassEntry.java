@@ -10,7 +10,7 @@
  ******************************************************************************/
 package cuchaz.enigma.gui;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 
 public class ScoredClassEntry extends ClassEntry {

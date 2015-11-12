@@ -10,13 +10,13 @@
  ******************************************************************************/
 package cuchaz.enigma;
 
+import cuchaz.enigma.Deobfuscator.ProgressListener;
+import cuchaz.enigma.mapping.io.reader.MappingsReader;
+import cuchaz.enigma.mapping.util.Mappings;
+
 import java.io.File;
 import java.io.FileReader;
 import java.util.jar.JarFile;
-
-import cuchaz.enigma.Deobfuscator.ProgressListener;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.reader.MappingsReader;
 
 public class CommandMain {
 	

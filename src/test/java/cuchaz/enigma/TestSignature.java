@@ -15,9 +15,9 @@ import static org.hamcrest.Matchers.*;
 
 import org.junit.Test;
 
-import cuchaz.enigma.mapping.ClassNameReplacer;
-import cuchaz.enigma.mapping.Signature;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.impl.ClassNameReplacer;
+import cuchaz.enigma.mapping.element.Signature;
+import cuchaz.enigma.mapping.element.Type;
 
 
 public class TestSignature {

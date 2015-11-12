@@ -17,10 +17,10 @@ import javassist.bytecode.CodeAttribute;
 import javassist.bytecode.ConstPool;
 import javassist.bytecode.LocalVariableAttribute;
 import javassist.bytecode.LocalVariableTypeAttribute;
-import cuchaz.enigma.mapping.ArgumentEntry;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.ArgumentEntry;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.impl.Translator;
 
 
 public class LocalVariableRenamer {

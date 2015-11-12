@@ -21,16 +21,16 @@ import java.util.jar.JarFile;
 import org.junit.Test;
 
 import cuchaz.enigma.analysis.Access;
-import cuchaz.enigma.analysis.ClassImplementationsTreeNode;
-import cuchaz.enigma.analysis.ClassInheritanceTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassInheritanceTreeNode;
 import cuchaz.enigma.analysis.EntryReference;
 import cuchaz.enigma.analysis.JarIndex;
-import cuchaz.enigma.analysis.MethodInheritanceTreeNode;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.analysis.treenode.MethodInheritanceTreeNode;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.impl.Translator;
 
 public class TestJarIndexLoneClass {
 	

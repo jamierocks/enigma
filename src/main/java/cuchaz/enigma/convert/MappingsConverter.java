@@ -31,21 +31,21 @@ import cuchaz.enigma.Constants;
 import cuchaz.enigma.Deobfuscator;
 import cuchaz.enigma.analysis.JarIndex;
 import cuchaz.enigma.convert.ClassNamer.SidedClassNamer;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ClassMapping;
-import cuchaz.enigma.mapping.ClassNameReplacer;
-import cuchaz.enigma.mapping.ConstructorEntry;
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.FieldMapping;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsChecker;
-import cuchaz.enigma.mapping.MemberMapping;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.MethodMapping;
-import cuchaz.enigma.mapping.Signature;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.type.ClassMapping;
+import cuchaz.enigma.mapping.impl.ClassNameReplacer;
+import cuchaz.enigma.mapping.entry.ConstructorEntry;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.type.FieldMapping;
+import cuchaz.enigma.mapping.util.Mappings;
+import cuchaz.enigma.mapping.impl.MappingsChecker;
+import cuchaz.enigma.mapping.type.MemberMapping;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.type.MethodMapping;
+import cuchaz.enigma.mapping.element.Signature;
+import cuchaz.enigma.mapping.element.Type;
 
 public class MappingsConverter {
 	

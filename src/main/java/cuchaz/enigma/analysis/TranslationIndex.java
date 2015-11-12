@@ -34,13 +34,13 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
-import cuchaz.enigma.mapping.ArgumentEntry;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.ArgumentEntry;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.impl.Translator;
 
 public class TranslationIndex implements Serializable {
 	

@@ -14,13 +14,12 @@ import java.io.File;
 import java.util.Set;
 import java.util.jar.JarFile;
 
-import cuchaz.enigma.Deobfuscator;
 import org.junit.Test;
 
 import com.google.common.collect.Sets;
 import com.strobel.decompiler.languages.java.ast.CompilationUnit;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class TestSourceIndex {
 	@Test

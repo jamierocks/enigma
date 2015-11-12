@@ -21,9 +21,9 @@ import javassist.bytecode.ConstPool;
 import javassist.bytecode.EnclosingMethodAttribute;
 import javassist.bytecode.InnerClassesAttribute;
 import cuchaz.enigma.analysis.JarIndex;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.EntryFactory;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
 
 public class InnerClassWriter {
 	

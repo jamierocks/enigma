@@ -15,7 +15,7 @@ import java.util.Map;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.Maps;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class ClassNamer {
 	

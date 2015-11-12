@@ -25,26 +25,26 @@ import com.strobel.decompiler.languages.java.ast.CompilationUnit;
 
 import cuchaz.enigma.Deobfuscator;
 import cuchaz.enigma.Deobfuscator.ProgressListener;
-import cuchaz.enigma.analysis.BehaviorReferenceTreeNode;
-import cuchaz.enigma.analysis.ClassImplementationsTreeNode;
-import cuchaz.enigma.analysis.ClassInheritanceTreeNode;
+import cuchaz.enigma.analysis.treenode.BehaviorReferenceTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassInheritanceTreeNode;
 import cuchaz.enigma.analysis.EntryReference;
-import cuchaz.enigma.analysis.FieldReferenceTreeNode;
-import cuchaz.enigma.analysis.MethodImplementationsTreeNode;
-import cuchaz.enigma.analysis.MethodInheritanceTreeNode;
+import cuchaz.enigma.analysis.treenode.FieldReferenceTreeNode;
+import cuchaz.enigma.analysis.treenode.MethodImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.MethodInheritanceTreeNode;
 import cuchaz.enigma.analysis.SourceIndex;
 import cuchaz.enigma.analysis.Token;
 import cuchaz.enigma.gui.ProgressDialog.ProgressRunnable;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.MappingParseException;
-import cuchaz.enigma.mapping.reader.MappingsOriginalReader;
-import cuchaz.enigma.mapping.reader.MappingsReader;
-import cuchaz.enigma.mapping.MappingsWriter;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.TranslationDirection;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.exception.MappingParseException;
+import cuchaz.enigma.mapping.io.reader.MappingsOriginalReader;
+import cuchaz.enigma.mapping.io.reader.MappingsReader;
+import cuchaz.enigma.mapping.io.writer.MappingsWriter;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.util.TranslationDirection;
 
 public class GuiController {
 	

@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 
 import org.junit.Test;
 
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.element.Type;
 
 
 public class TestType {

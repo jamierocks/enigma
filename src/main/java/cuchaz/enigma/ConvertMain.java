@@ -10,30 +10,30 @@
  ******************************************************************************/
 package cuchaz.enigma;
 
+import cuchaz.enigma.convert.ClassMatches;
+import cuchaz.enigma.convert.MappingsConverter;
+import cuchaz.enigma.convert.MemberMatches;
+import cuchaz.enigma.convert.io.MatchesReader;
+import cuchaz.enigma.convert.io.MatchesWriter;
+import cuchaz.enigma.gui.ClassMatchingGui;
+import cuchaz.enigma.gui.MemberMatchingGui;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.exception.MappingParseException;
+import cuchaz.enigma.mapping.impl.MappingsChecker;
+import cuchaz.enigma.mapping.io.reader.MappingsReader;
+import cuchaz.enigma.mapping.io.writer.MappingsWriter;
+import cuchaz.enigma.mapping.type.ClassMapping;
+import cuchaz.enigma.mapping.type.FieldMapping;
+import cuchaz.enigma.mapping.type.MethodMapping;
+import cuchaz.enigma.mapping.util.Mappings;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.jar.JarFile;
-
-import cuchaz.enigma.convert.ClassMatches;
-import cuchaz.enigma.convert.MappingsConverter;
-import cuchaz.enigma.convert.MatchesReader;
-import cuchaz.enigma.convert.MatchesWriter;
-import cuchaz.enigma.convert.MemberMatches;
-import cuchaz.enigma.gui.ClassMatchingGui;
-import cuchaz.enigma.gui.MemberMatchingGui;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ClassMapping;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.FieldMapping;
-import cuchaz.enigma.mapping.MappingParseException;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.MappingsChecker;
-import cuchaz.enigma.mapping.reader.MappingsReader;
-import cuchaz.enigma.mapping.MappingsWriter;
-import cuchaz.enigma.mapping.MethodMapping;
 
 
 public class ConvertMain {

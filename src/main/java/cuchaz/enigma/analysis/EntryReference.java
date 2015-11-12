@@ -14,9 +14,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import cuchaz.enigma.Util;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ConstructorEntry;
-import cuchaz.enigma.mapping.Entry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.ConstructorEntry;
+import cuchaz.enigma.mapping.entry.Entry;
 
 public class EntryReference<E extends Entry,C extends Entry> {
 	

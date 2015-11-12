@@ -18,13 +18,13 @@ import javassist.bytecode.ConstPool;
 import javassist.bytecode.Descriptor;
 import javassist.bytecode.EnclosingMethodAttribute;
 import javassist.bytecode.SourceFileAttribute;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.Signature;
-import cuchaz.enigma.mapping.Translator;
-import cuchaz.enigma.mapping.Type;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.element.Signature;
+import cuchaz.enigma.mapping.impl.Translator;
+import cuchaz.enigma.mapping.element.Type;
 
 public class ClassTranslator {
 	

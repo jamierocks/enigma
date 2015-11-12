@@ -16,12 +16,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.jar.JarFile;
 
-import cuchaz.enigma.Deobfuscator;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class TestDeobfuscator {
 	

@@ -19,9 +19,9 @@ import javassist.bytecode.ConstPool;
 import javassist.bytecode.Descriptor;
 import javassist.bytecode.Opcode;
 import cuchaz.enigma.bytecode.CheckCastIterator.CheckCast;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.Signature;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.element.Signature;
 
 public class CheckCastIterator implements Iterator<CheckCast> {
 	

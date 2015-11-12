@@ -41,9 +41,9 @@ import javassist.bytecode.SignatureAttribute.Type;
 import javassist.bytecode.SignatureAttribute.TypeArgument;
 import javassist.bytecode.SignatureAttribute.TypeParameter;
 import javassist.bytecode.SignatureAttribute.TypeVariable;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ClassNameReplacer;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.impl.ClassNameReplacer;
+import cuchaz.enigma.mapping.impl.Translator;
 
 public class ClassRenamer {
 	

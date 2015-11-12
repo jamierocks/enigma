@@ -15,13 +15,12 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.jar.JarFile;
 
-import cuchaz.enigma.Deobfuscator;
 import org.junit.Test;
 
 import static cuchaz.enigma.TestEntryFactory.*;
 
 import cuchaz.enigma.analysis.JarIndex;
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class TestInnerClasses {
 	

@@ -28,7 +28,7 @@ import javassist.bytecode.Descriptor;
 import com.google.common.collect.Lists;
 
 import cuchaz.enigma.Constants;
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class JarClassIterator implements Iterator<CtClass> {
 	

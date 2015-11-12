@@ -38,8 +38,8 @@ import cuchaz.enigma.bytecode.ClassTranslator;
 import cuchaz.enigma.bytecode.InnerClassWriter;
 import cuchaz.enigma.bytecode.LocalVariableRenamer;
 import cuchaz.enigma.bytecode.MethodParameterWriter;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.impl.Translator;
 
 public class TranslatingTypeLoader implements ITypeLoader {
 	

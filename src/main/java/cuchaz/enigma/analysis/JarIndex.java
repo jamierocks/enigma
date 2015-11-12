@@ -19,6 +19,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.jar.JarFile;
 
+import cuchaz.enigma.analysis.treenode.ClassImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.ClassInheritanceTreeNode;
+import cuchaz.enigma.analysis.treenode.MethodImplementationsTreeNode;
+import cuchaz.enigma.analysis.treenode.MethodInheritanceTreeNode;
 import javassist.CannotCompileException;
 import javassist.CtBehavior;
 import javassist.CtClass;
@@ -45,15 +49,15 @@ import com.google.common.collect.Sets;
 
 import cuchaz.enigma.Constants;
 import cuchaz.enigma.bytecode.ClassRenamer;
-import cuchaz.enigma.mapping.ArgumentEntry;
-import cuchaz.enigma.mapping.BehaviorEntry;
-import cuchaz.enigma.mapping.ClassEntry;
-import cuchaz.enigma.mapping.ConstructorEntry;
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.EntryFactory;
-import cuchaz.enigma.mapping.FieldEntry;
-import cuchaz.enigma.mapping.MethodEntry;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.ArgumentEntry;
+import cuchaz.enigma.mapping.entry.BehaviorEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
+import cuchaz.enigma.mapping.entry.ConstructorEntry;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.entry.EntryFactory;
+import cuchaz.enigma.mapping.entry.FieldEntry;
+import cuchaz.enigma.mapping.entry.MethodEntry;
+import cuchaz.enigma.mapping.impl.Translator;
 
 public class JarIndex {
 	

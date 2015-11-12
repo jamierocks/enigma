@@ -12,7 +12,7 @@ package cuchaz.enigma.gui;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import cuchaz.enigma.mapping.ClassEntry;
+import cuchaz.enigma.mapping.entry.ClassEntry;
 
 public class ClassSelectorClassNode extends DefaultMutableTreeNode {
 	

@@ -21,11 +21,11 @@ import java.util.jar.JarFile;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import cuchaz.enigma.mapping.Entry;
-import cuchaz.enigma.mapping.Mappings;
-import cuchaz.enigma.mapping.reader.MappingsReader;
-import cuchaz.enigma.mapping.TranslationDirection;
-import cuchaz.enigma.mapping.Translator;
+import cuchaz.enigma.mapping.entry.Entry;
+import cuchaz.enigma.mapping.util.Mappings;
+import cuchaz.enigma.mapping.io.reader.MappingsReader;
+import cuchaz.enigma.mapping.util.TranslationDirection;
+import cuchaz.enigma.mapping.impl.Translator;
 
 
 public class TestTranslator {
