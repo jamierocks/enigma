@@ -22,6 +22,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 
+import cuchaz.enigma.mapping.Type;
 import javassist.CtClass;
 import javassist.bytecode.Descriptor;
 
@@ -123,10 +124,30 @@ public class Deobfuscator {
 		if (val == null) {
 			val = new Mappings();
 		}
+
+		Mappings newMappings = new Mappings();
+
+		for (ClassMapping mapping : val.classes()) {
+			ClassMapping newMapping = new ClassMapping(mapping.getObfFullName(), mapping.getDeobfName());
+			if (m_jarIndex.containsObfClass(mapping.getObfEntry())) {
+				for (FieldMapping fieldMapping : mapping.fields()) {
+					for (FieldEntry fieldEntry : m_jarIndex.getObfFieldEntries(mapping.getObfEntry())) {
+						if (fieldMapping.getObfName().equals(fieldEntry.getName())) {
+							fieldMapping.setObfType(fieldEntry.getType());
+						}
+					}
+					newMapping.addFieldMapping(fieldMapping);
+				}
+				for (MethodMapping methodMapping : mapping.methods()) {
+					newMapping.addMethodMapping(methodMapping);
+				}
+			}
+			newMappings.addClassMapping(newMapping);
+		}
 		
 		// drop mappings that don't match the jar
 		MappingsChecker checker = new MappingsChecker(m_jarIndex);
-		checker.dropBrokenMappings(val);
+		checker.dropBrokenMappings(newMappings);
 		if (warnAboutDrops) {
 			for (java.util.Map.Entry<ClassEntry,ClassMapping> mapping : checker.getDroppedClassMappings().entrySet()) {
 				System.out.println("WARNING: Couldn't find class entry " + mapping.getKey() + " (" + mapping.getValue().getDeobfName() + ") in jar. Mapping was dropped.");
@@ -147,7 +168,7 @@ public class Deobfuscator {
 			throw new Error("Related methods are inconsistent! Need to fix the mappings manually.\n" + checker.getRelatedMethodChecker().getReport());
 		}
 		
-		m_mappings = val;
+		m_mappings = newMappings;
 		m_renamer = new MappingsRenamer(m_jarIndex, val);
 		m_translatorCache.clear();
 	}

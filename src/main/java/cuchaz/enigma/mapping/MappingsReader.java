@@ -10,12 +10,9 @@
  ******************************************************************************/
 package cuchaz.enigma.mapping;
 
-import com.google.common.collect.Queues;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.Deque;
 import java.util.Scanner;
 
 public class MappingsReader {
@@ -28,7 +25,6 @@ public class MappingsReader {
 	public Mappings read(BufferedReader in)
 	throws IOException, MappingParseException {
 		Mappings mappings = new Mappings();
-		Deque<Object> mappingStack = Queues.newArrayDeque();
 
 		Scanner scanner = new Scanner(in);
 
@@ -39,11 +35,15 @@ public class MappingsReader {
 			if (line.startsWith("CL: ")) {
 				mappings.addClassMapping(new ClassMapping(split[0], split[1]));
 			} else if (line.startsWith("FD: ")) {
+				String[] obfSplit = split[0].split("/");
+
 				String[] deobfSplit = split[1].split("/");
 				String deobfClass = split[1]
 						.substring(0, split[1].length() - (deobfSplit[deobfSplit.length - 1].length() + 1));
-				//mappings.getClassByDeobf(deobfClass).addFieldMapping(new FieldMapping());
-				// TODO:
+
+				mappings.getClassByDeobf(deobfClass)
+						.addFieldMapping(new FieldMapping(obfSplit[obfSplit.length - 1],
+								new Type("B"), deobfSplit[deobfSplit.length - 1]));
 			} else if (line.startsWith("MD: ")) {
 				String[] obfSplit = split[0].split("/");
 
