@@ -22,7 +22,6 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 
-import cuchaz.enigma.mapping.Type;
 import javassist.CtClass;
 import javassist.bytecode.Descriptor;
 

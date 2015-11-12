@@ -89,8 +89,15 @@ public class MappingsWriter {
 		}
 
 		protected void write(PrintWriter out) {
-			out.format("FD: %s/%s %s/%s\n", classMapping.getObfFullName(), fieldMapping.getObfName(),
-					classMapping.getDeobfName(), fieldMapping.getDeobfName());
+			String classDeobfName = classMapping.getObfFullName();
+
+			if (classMapping.getDeobfName() != null) {
+				classDeobfName = classMapping.getDeobfName();
+			}
+
+			out.format("FD: %s/%s %s/%s\n",
+					classMapping.getObfFullName(), fieldMapping.getObfName(),
+					classDeobfName, fieldMapping.getDeobfName());
 		}
 	}
 
@@ -107,9 +114,17 @@ public class MappingsWriter {
 		}
 
 		protected void write(PrintWriter out) {
-			out.format("MD: %s/%s %s %s/%s %s\n",
-					classMapping.getObfFullName(), methodMapping.getObfName(), methodMapping.getObfSignature(),
-					classMapping.getDeobfName(), methodMapping.getDeobfName(), methodMapping.getDeobfSiganture(mappings));
+			String classDeobfName = classMapping.getObfFullName();
+
+			if (classMapping.getDeobfName() != null) {
+				classDeobfName = classMapping.getDeobfName();
+			}
+
+			if (!methodMapping.getObfName().equals("<init>")) {
+				out.format("MD: %s/%s %s %s/%s %s\n",
+						classMapping.getObfFullName(), methodMapping.getObfName(), methodMapping.getObfSignature(),
+						classDeobfName, methodMapping.getDeobfName(), methodMapping.getDeobfSiganture(mappings));
+			}
 		}
 	}
 }

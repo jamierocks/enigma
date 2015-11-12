@@ -85,7 +85,7 @@ public class MethodMapping implements Serializable, Comparable<MethodMapping>, M
 		for (String type : innerContent.split(";")) {
 			if (type.startsWith("L")) {
 				String newType = type.substring(1);
-				if (mappings.containsObfClass(newType)) {
+				if (mappings.containsObfClass(newType) && mappings.getClassByDeobf(newType) != null) {
 					originalType = originalType.replace(newType, mappings.getClassByObf(newType).getDeobfName());
 				}
 			}
@@ -93,7 +93,7 @@ public class MethodMapping implements Serializable, Comparable<MethodMapping>, M
 
 		if (outerContent.startsWith("L")) {
 			String outerType = outerContent.substring(1, outerContent.length() - 1);
-			if (mappings.containsObfClass(outerType)) {
+			if (mappings.containsObfClass(outerType) && mappings.getClassByDeobf(outerType) != null) {
 				originalType = originalType.replace(outerType, mappings.getClassByObf(outerType).getDeobfName());
 			}
 		}
