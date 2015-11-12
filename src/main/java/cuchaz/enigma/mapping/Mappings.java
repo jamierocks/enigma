@@ -171,6 +171,10 @@ public class Mappings implements Serializable {
 		}
 		return classNames;
 	}
+
+	public boolean containsObfClass(String obfName) {
+		return m_classesByObf.containsKey(obfName);
+	}
 	
 	public boolean containsDeobfClass(String deobfName) {
 		return m_classesByDeobf.containsKey(deobfName);

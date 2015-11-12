@@ -25,38 +25,39 @@ public class MappingsWriter {
 	
 	public void write(PrintWriter out, Mappings mappings) throws IOException {
 		for (ClassMapping classMapping : sorted(mappings.classes())) {
-			write(out, classMapping);
+			write(out, mappings, classMapping);
 		}
 	}
 	
-	private void write(PrintWriter out, ClassMapping classMapping) throws IOException {
+	private void write(PrintWriter out, Mappings mappings, ClassMapping classMapping) throws IOException {
 		if (classMapping.getDeobfName() != null) {
 			out.format("CL: %s %s\n", classMapping.getObfFullName(), classMapping.getDeobfName());
 		}
 		
 		for (ClassMapping innerClassMapping : sorted(classMapping.innerClasses())) {
-			write(out, innerClassMapping);
+			write(out, mappings, innerClassMapping);
 		}
 		
 		for (FieldMapping fieldMapping : sorted(classMapping.fields())) {
-			write(out, classMapping, fieldMapping);
+			write(out, mappings, classMapping, fieldMapping);
 		}
 		
 		for (MethodMapping methodMapping : sorted(classMapping.methods())) {
-			write(out, classMapping, methodMapping);
+			write(out, mappings, classMapping, methodMapping);
 		}
 	}
 	
-	private void write(PrintWriter out, ClassMapping classMapping, FieldMapping fieldMapping) throws IOException {
+	private void write(PrintWriter out, Mappings mappings, ClassMapping classMapping, FieldMapping fieldMapping)
+			throws IOException {
 		out.format("FD: %s/%s %s/%s\n", classMapping.getObfFullName(), fieldMapping.getObfName(),
 				classMapping.getDeobfName(), fieldMapping.getDeobfName());
 	}
 	
-	private void write(PrintWriter out, ClassMapping classMapping, MethodMapping methodMapping) throws IOException {
+	private void write(PrintWriter out, Mappings mappings, ClassMapping classMapping, MethodMapping methodMapping)
+			throws IOException {
 		out.format("MD: %s/%s %s %s/%s %s",
 				classMapping.getObfFullName(), methodMapping.getObfName(), methodMapping.getObfSignature(),
-				classMapping.getDeobfName(), methodMapping.getDeobfName(), methodMapping.getObfSignature());
-		// TODO: 6th param might break things :\
+				classMapping.getDeobfName(), methodMapping.getDeobfName(), methodMapping.getDeobfSiganture(mappings));
 	}
 	
 	private <T extends Comparable<T>> List<T> sorted(Iterable<T> classes) {

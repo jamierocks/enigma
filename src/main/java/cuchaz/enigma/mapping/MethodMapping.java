@@ -72,6 +72,34 @@ public class MethodMapping implements Serializable, Comparable<MethodMapping>, M
 	public Signature getObfSignature() {
 		return m_obfSignature;
 	}
+
+	public Signature getDeobfSiganture(Mappings mappings) {
+		String innerContent = m_obfSignature.toString()
+				.substring(m_obfSignature.toString().indexOf("(") + 1,
+						m_obfSignature.toString().indexOf(")"));
+		String outerContent = m_obfSignature.toString()
+				.substring(m_obfSignature.toString().indexOf(")") + 1);
+
+		String originalType = m_obfSignature.toString();
+
+		for (String type : innerContent.split(";")) {
+			if (type.startsWith("L")) {
+				String newType = type.substring(1);
+				if (mappings.containsObfClass(newType)) {
+					originalType = originalType.replace(newType, mappings.getClassByObf(newType).getDeobfName());
+				}
+			}
+		}
+
+		if (outerContent.startsWith("L")) {
+			String outerType = outerContent.substring(1, outerContent.length() - 1);
+			if (mappings.containsObfClass(outerType)) {
+				originalType = originalType.replace(outerType, mappings.getClassByObf(outerType).getDeobfName());
+			}
+		}
+
+		return new Signature(originalType);
+	}
 	
 	public void setObfSignature(Signature val) {
 		m_obfSignature = val;

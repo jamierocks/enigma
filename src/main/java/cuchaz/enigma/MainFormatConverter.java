@@ -53,14 +53,7 @@ public class MainFormatConverter {
 		System.out.println("Reading mappings...");
 		
 		File fileMappings = new File("../Enigma Mappings/1.8.mappings");
-		MappingsReader mappingsReader = new MappingsReader() {
-			
-			@Override
-			protected FieldMapping readField(String[] parts) {
-				// assume the void type for now
-				return new FieldMapping(parts[1], new Type("V"), parts[2]);
-			}
-		};
+		MappingsReader mappingsReader = new MappingsReader();
 		Mappings mappings = mappingsReader.read(new FileReader(fileMappings));
 		
 		System.out.println("Updating field types...");
